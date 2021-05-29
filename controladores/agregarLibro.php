@@ -7,12 +7,12 @@
 </head>
 <body>
     <header>
-        <a href="index.html"><img src="../imgs/Banner.png"></a>
+        <a href="../vista/index.html"><img src="../imgs/Banner.png"></a>
         <header></header>
         <nav>
             <ul>
-            <li><a href="indexBuscar.html">Búsqueda de Libro</a></li>
-            <li><a href="indexAgregar.php">Registrar Libro</a></li>
+            <li><a href="../vista/indexBuscar.html">Búsqueda de Libro</a></li>
+            <li><a href="../vista/indexAgregar.php">Registrar Libro</a></li>
             </ul>
         </nav>
     </header>
@@ -22,13 +22,14 @@
 //incluir conexión a la base de datos
     include '../config/conexionBD.php';
 
-
     $nlibro = isset($_POST["nlibro"]) ? trim($_POST["nlibro"]): null;
-    $isbn = isset($_POST["isbn"]) ? trim($_POST["isbn"]): null;
+    $isbn = isset($_POST["ISBN"]) ? trim($_POST["ISBN"]): null;
     $numP = isset($_POST["numP"]) ? trim($_POST["numP"]): null;
     $sql =  "INSERT INTO libros VALUES (0, '$nlibro', '$isbn', '$numP');";
     if ($conn->query($sql) === TRUE) {
-        echo "<h1>Libro registrado correctamente</h1>";
+        
+        header  ("location: ../vista/indexAgregarCapitulo.php?isbn=$isbn");
+       // echo($isbn);
     } else {
         echo "<p class='error'>Error: " . mysqli_error($conn) . "</p>";
     }

@@ -34,35 +34,9 @@
         <input type="text" id="numP" name="numP" value="" placeholder="Ingrese el numero de Paginas..."/>
         <span id="mensajeApellidos" class="error"></span>
         <br>
-
-
-
-
-        <label for="autor">Autor (*)</label>
-        <select id="autor" name="autor" >
-
-        <?php
-            $codigo = $_GET["codigo"];
-            $sql = "SELECT * FROM autores;" ;
-            include '../config/conexionBD.php';
-            $result = $conn->query($sql);
-            if ($result->num_rows > 0) {
-                while($row = $result->fetch_assoc()) {
-                    echo "<option>" . $row['aut_nombre']. " </option>";
-                    }
-                }
-       
-        ?>
-
-        </select>
-        <br>
-        <br>
-
-
         <input type="submit" id="crear" name="crear" value="Registrar Libro" /> 
-            <input type="reset" id="cancelar" name="cancelar" value="Resetear" />
-        </form>
-    
+        <input type="reset" id="cancelar" name="cancelar" value="Resetear" /> 
+</form>
 </body>
 <footer>
       Paul Guzhñay 
