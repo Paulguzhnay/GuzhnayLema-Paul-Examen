@@ -1,0 +1,40 @@
+/*HTML*/
+html{
+    background-color: olivedrab;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/*IMAGEN ENCABEZADO*/
+header img {
+	width: 100%;
+}
+/*TABLA*/
+nav ul li {
+    display: table-cell;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    width: 10%;
+    text-align: center;
+    border-radius: 20px;
+    border-style: solid;
+    background-color: red;  
+}
+nav li{
+     color: black;
+     border: thin solid black;
+}
+nav {
+    display: table;
+    width: 100%;
+    margin: 2 auto;
+    float: none;
+}
+nav ul {
+    display: table-row;
+    margin: 0;
+}
+nav ul li a{
+    color: black;
+}
+nav ul li:last-of-type {
+    margin-right: 10%;
+}
