@@ -16,8 +16,11 @@
             </ul>
         </nav>
     </header>
+    <br>
+
+
     <form id="formulario01" method="POST" action="../controladores/agregarLibro.php" >
-        <h1>Crear Usuario</h1>
+        <h1>Registrar Libro</h1>
             <label for="nlibro">Nombre del Libro (*)</label>
             <input type="text" id="nlibro" name="nlibro" value="" placeholder="Ingrese el nombre del libro..." />
             <span id="mensajeNombres" class="error"></span>
@@ -34,17 +37,30 @@
 
 
 
-        <label for="rol">Autor (*)</label>
-        <select id="rol" name="rol" >
-            <option>Usuario</option>
-            <option>Administrador</option>
+
+        <label for="autor">Autor (*)</label>
+        <select id="autor" name="autor" >
+
+        <?php
+            $codigo = $_GET["codigo"];
+            $sql = "SELECT * FROM autores;" ;
+            include '../config/conexionBD.php';
+            $result = $conn->query($sql);
+            if ($result->num_rows > 0) {
+                while($row = $result->fetch_assoc()) {
+                    echo "<option>" . $row['aut_nombre']. " </option>";
+                    }
+                }
+       
+        ?>
+
         </select>
         <br>
         <br>
 
 
-        <input type="submit" id="crear" name="crear" value="Crear Usuario" /> 
-            <input type="reset" id="cancelar" name="cancelar" value="Cancelar" />
+        <input type="submit" id="crear" name="crear" value="Registrar Libro" /> 
+            <input type="reset" id="cancelar" name="cancelar" value="Resetear" />
         </form>
     
 </body>
