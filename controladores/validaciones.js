@@ -84,7 +84,7 @@ function validarISBN(elemento){
         if(miAscii>=48 && miAscii<=57){
             if(isbn.length==10){
                 elemento.style.border = '2px red solid'
-                document.getElementById("mensajeISBN").style.color = "blue";
+                document.getElementById("mensajeISBN").style.color = "yellow";
                 document.getElementById("mensajeISBN").innerHTML = "<br>ISBN correcto"
     
             }else if ((isbn.length>11)){
