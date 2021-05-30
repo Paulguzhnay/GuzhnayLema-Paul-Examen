@@ -36,7 +36,7 @@ function validarCamposObligatorios(){
     if(!bandera){ 
         alert('Error: Campos Obligatorios Vacíos')
     }else{
-        alert("Bienvenido, pasaste las validaciones!")
+        alert("Libro Registrado Correctamente")
     } 
     return bandera
 }
@@ -71,7 +71,7 @@ function validarCamposObligatorios2(){
     if(!bandera){ 
         alert('Error: Campos Obligatorios Vacíos')
     }else{
-        alert("Bienvenido, pasaste las validaciones!")
+        alert("Capitulo Registrado Correctamente")
     } 
     return bandera
 }
@@ -87,14 +87,14 @@ function validarISBN(elemento){
                 document.getElementById("mensajeISBN").style.color = "yellow";
                 document.getElementById("mensajeISBN").innerHTML = "<br>ISBN correcto"
     
-            }else if ((isbn.length>11)){
+            }else if ((isbn.length>10)){
                 elemento.value = elemento.value.substring(0, elemento.value.length-1)
                 document.getElementById("mensajeISBN").style.color = "yellow";
-                document.getElementById("mensajeISBN").innerHTML = "<br>ISBN requerido de 10 digitos"    
+                document.getElementById("mensajeISBN").innerHTML = "<br>El ISBN tiene que tener 10 digitos"    
             }else{
                // elemento.value = elemento.value.substring(0, elemento.value.length-1)
                 document.getElementById("mensajeISBN").style.color = "yellow";
-                document.getElementById("mensajeISBN").innerHTML = "<br>ISBN de 10 digitos"    
+                document.getElementById("mensajeISBN").innerHTML = "<br>El ISBN tiene que tener 10 digitos"    
                 
             }
         }else{
