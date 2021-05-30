@@ -1,6 +1,17 @@
-<?php
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>Home</title>
+    <link href="../css/index.css" rel="stylesheet" />
+    <script type="text/javascript" src="../controladores/buscarA.js"></script>
+</head>
+<body>
+
+
+    <?php
  //incluir conexión a la base de datos
- include "../../config/conexionBD.php";
+ include "../config/conexionBD.php";
  $autor = $_GET['autor'];
  //echo "Hola " . $cedula;
 echo("<h1>Resultados</h1>");
@@ -10,14 +21,13 @@ echo("<h1>Resultados</h1>");
    while ($row1 = $result->fetch_assoc()){
     if($row1['aut_id']){
         $codigoautor = $row1['aut_id'];
+        echo ($row1['aut_id']);
     }
 }
-   
-   $sql2="SELECT lib_nombre, lib_num_pag, cap_numero,cap_titulo,aut_nombre, aut_nacionalidad FROM libros,capitulos, autores 
-    WHERE autores_aut_id='$codigoautor';"
+   $sql2="SELECT * FROM libros l ,capitulos c,autores a 
+   WHERE c.autores_aut_id=aut_id and l.lib_id=lib_id and a.aut_id='$codigoautor';";
     $result2= $conn->query($sql2);
     //cambiar la consulta para puede buscar por ocurrencias de letras
-    //$result2= $conn->query($sql2);
     echo " <table style='width:100%' border='1' align='center'>
     <tr>
     <th colspan='5'>  Datos Personales </th>
@@ -55,3 +65,7 @@ echo("<h1>Resultados</h1>");
     $conn->close();
 
 ?>
+
+</body>
+
+</html>

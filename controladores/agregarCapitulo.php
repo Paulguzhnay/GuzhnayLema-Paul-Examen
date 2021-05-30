@@ -11,8 +11,8 @@
         <header></header>
         <nav>
             <ul>
-            <li><a href="indexBuscar.html">Búsqueda de Libro</a></li>
-            <li><a href="indexAgregar.php">Registrar Libro</a></li>
+            <li><a href="../vista/indexBuscar.html">Búsqueda de Libro</a></li>
+            <li><a href="../vista/indexAgregar.php">Registrar Libro</a></li>
             </ul>
         </nav>
     </header>
@@ -55,13 +55,12 @@
         echo "<p class='error'>Error: " . mysqli_error($conn) . "</p>";
     }
     //cerrar la base de datos
+    echo ('<h1>¿Desea agregar mas capítulos? </h1>
+    <a href="../vista/indexAgregarCapitulo.php?isbn='.$isbn.'"">Agregar mas Capitulos</a>
+    ');
     $conn->close();
 ?>
-<h1>¿Desea agregar mas capítulos? </h1>
-<a href="../vista/indexAgregarCapitulo.php?isbn="$isbn">Agregar </a>
-<button onclick="href=>Agregar mas Capitulos</button>
-<input type="reset" id="cancelar" name="cancelar" value="Regresar" /> 
-
+ <input type="reset" id="cancelar" name="cancelar" value="Regresar"onclick="location.href='../vista/index.html'" /> 
 
 </body>
 <footer>

@@ -13,6 +13,7 @@
             <ul>
             <li><a href="../vista/indexBuscar.html">Búsqueda de Libro</a></li>
             <li><a href="../vista/indexAgregar.php">Registrar Libro</a></li>
+
             </ul>
         </nav>
     </header>

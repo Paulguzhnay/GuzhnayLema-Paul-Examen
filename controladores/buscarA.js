@@ -1,8 +1,9 @@
 function buscarA() {
     var autor = document.getElementById("autor").value;
+   // document.write(autor);
     if (autor == "") {
     document.getElementById("informacion").innerHTML = "";
-    } else {
+} else {
     if (window.XMLHttpRequest) {
     // code for IE7+, Firefox, Chrome, Opera, Safari
     xmlhttp = new XMLHttpRequest();
@@ -18,7 +19,6 @@ function buscarA() {
     }
     };
     xmlhttp.open("GET","../controladores/buscar.php?autor="+autor,true);
-    document.write(autor);
     xmlhttp.send();
     }
     return false;
