@@ -3,6 +3,11 @@
 <head>
     <meta charset="utf-8"/>
     <title>Home</title>
+	<script
+	src="https://code.jquery.com/jquery-3.3.1.min.js"
+	integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+	crossorigin="anonymous"></script>
+ 
     <link href="../css/index.css" rel="stylesheet" />
 </head>
 <body>
@@ -45,13 +50,15 @@ AGREGAR CAPITULOS
             if ($result->num_rows > 0) {
                 while($row = $result->fetch_assoc()) {
                     echo "<option>" . $row['aut_nombre']. " </option>";
-                    echo "<a>". $row['aut_nacionalidad']."</a>";    
+                    echo "";    
                 }
                 }
         $conn->close();
         ?>
         <input type="hidden" id ="isbn" name="isbn" value="<?php echo $isbn ?> "/>
         </select>
+
+        <div id="nacion"> </div>
 
         <br>
         <br>
@@ -69,3 +76,26 @@ AGREGAR CAPITULOS
 <br/>&copy; Todos los derechos reservados
 </footer>
 </html>
+
+<script type="text/javascript">
+	$(document).ready(function(){
+	//	$('#autor').val(1);
+		recargarLista();
+
+		$('#autor').change(function(){
+			recargarLista();
+		});
+	})
+</script>
+<script type="text/javascript">
+	function recargarLista(){
+		$.ajax({
+			type:"POST",
+			url:"../controladores/datos.php",
+			data:"continente=" + $('#autor').val(),
+			success:function(r){
+				$('#nacion').html(r);
+			}
+		});
+	}
+</script>

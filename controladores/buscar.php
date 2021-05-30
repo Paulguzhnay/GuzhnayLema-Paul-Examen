@@ -25,14 +25,11 @@ echo("<h1>Resultados</h1>");
     }
 }
    $sql2="SELECT * FROM libros l ,capitulos c,autores a 
-   WHERE c.autores_aut_id=aut_id and l.lib_id=lib_id and a.aut_id='$codigoautor';";
+   WHERE c.autores_aut_id=aut_id and l.lib_id=c.libros_lib_id and a.aut_id='$codigoautor';";
     $result2= $conn->query($sql2);
     //cambiar la consulta para puede buscar por ocurrencias de letras
     echo " <table style='width:100%' border='1' align='center'>
-    <tr>
-    <th colspan='5'>  Datos Personales </th>
-    <th colspan ='3'>  Teléfonos</th>
-    </tr>
+
     <tr>
     <th>Nombre del Libro</th>
     <th>Numero de paginas</th>
