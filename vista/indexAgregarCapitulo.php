@@ -26,19 +26,22 @@
 <!--
 AGREGAR CAPITULOS
 -->
-<form id="formulario02" method="POST" action="../controladores/agregarCapitulo.php" >
+<form id="formulario02" class='formulario02' method="POST" action="../controladores/agregarCapitulo.php" >
         <h1>Registrar Capitulo</h1>
             <label for="numcapitulo">Numero del Capitulo (*)</label>
+            <br>
             <input type="text" id="numcapitulo" name="numcapitulo" value="" placeholder="Ingrese el numero del capitulo..." />
             <span id="mensajeNombres" class="error"></span>
         <br>
         <label for="ncapitulo">Nombre del Capitulo (*)</label>
+        <br>
         <input type="text" id="ncapitulo" name="ncapitulo" value="" placeholder="Ingrese el nombre del capitulo ..."  />
         <span id="mensajeApellidos" class="error"></span>
         <br>
 
 
         <label for="autor">Autor (*)</label>
+        <br>
         <select id="autor" name="autor" >
 
         <?php
@@ -57,6 +60,7 @@ AGREGAR CAPITULOS
         ?>
         <input type="hidden" id ="isbn" name="isbn" value="<?php echo $isbn ?> "/>
         </select>
+        <br>
 
         <div id="nacion"> </div>
 
@@ -69,6 +73,9 @@ AGREGAR CAPITULOS
         </form>
     
 </body>
+        <br>
+        <br>
+
 <footer>
       Paul Guzhñay 
       <br>

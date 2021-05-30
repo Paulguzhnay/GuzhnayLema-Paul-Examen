@@ -19,25 +19,35 @@
     <br>
 
 
-    <form id="formulario01" method="POST" action="../controladores/agregarLibro.php" >
+    <form id="formulario01" class='formulario01' method="POST" action="../controladores/agregarLibro.php" >
         <h1>Registrar Libro</h1>
             <label for="nlibro">Nombre del Libro (*)</label>
+            <br>
             <input type="text" id="nlibro" name="nlibro" value="" placeholder="Ingrese el nombre del libro..." />
             <span id="mensajeNombres" class="error"></span>
         <br>
-        <label for="ISBN">Codigo ISBN (*)</label>
+        <label for="ISBN">Codigo ISBN (*) </label>
+        <br>
         <input type="text" id="ISBN" name="ISBN" value="" placeholder="Ingrese el codigo ISBN ..."  />
         <span id="mensajeApellidos" class="error"></span>
         <br>
 
         <label for="numP">Numero de Paginas (*)</label>
+        <br>
         <input type="text" id="numP" name="numP" value="" placeholder="Ingrese el numero de Paginas..."/>
         <span id="mensajeApellidos" class="error"></span>
         <br>
+        
         <input type="submit" id="crear" name="crear" value="Registrar Libro" /> 
         <input type="reset" id="cancelar" name="cancelar" value="Resetear" /> 
+        <br>
+        <br>
+        
 </form>
+
 </body>
+<br>
+
 <footer>
       Paul Guzhñay 
       <br>

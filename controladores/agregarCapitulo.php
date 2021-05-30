@@ -28,8 +28,6 @@
     $ncapitulo = isset($_POST["ncapitulo"]) ? trim($_POST["ncapitulo"]): null;
     $autor = isset($_POST["autor"]) ? trim($_POST["autor"]): null;
     $isbn = isset($_POST["isbn"]) ? trim($_POST["isbn"]): null;
-    echo ($isbn);
-    echo ($autor);
 // Consulta para obtener el id de autores  
     $sql =  "SELECT aut_id FROM autores WHERE aut_nombre='$autor';";
     $result1 = $conn->query($sql);
@@ -55,14 +53,21 @@
         echo "<p class='error'>Error: " . mysqli_error($conn) . "</p>";
     }
     //cerrar la base de datos
-    echo ('<h1>¿Desea agregar mas capítulos? </h1>
-    <a href="../vista/indexAgregarCapitulo.php?isbn='.$isbn.'"">Agregar mas Capitulos</a>
-    ');
+    echo ('<h1 >¿Desea agregar mas capítulos? </h1>
+    <a class="opcionesA" href="../vista/indexAgregarCapitulo.php?isbn='.$isbn.'"">Agregar mas Capitulos</a>');
+    echo (' ');
+    echo ('');
+    echo ('');
+    echo ('');
     $conn->close();
 ?>
- <input type="reset" id="cancelar" name="cancelar" value="Regresar"onclick="location.href='../vista/index.html'" /> 
+<br>
+<br>
+<a class="opcionesA" href="../vista/index.html"> Regresar</a>
 
 </body>
+<br>
+<br>
 <footer>
       Paul Guzhñay 
       <br>

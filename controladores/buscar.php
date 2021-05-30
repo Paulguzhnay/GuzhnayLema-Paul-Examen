@@ -14,14 +14,13 @@
  include "../config/conexionBD.php";
  $autor = $_GET['autor'];
  //echo "Hola " . $cedula;
-echo("<h1>Resultados</h1>");
+//echo("<h1>Resultados</h1>");
    $sql="SELECT aut_id FROM autores WHERE aut_nombre = '$autor';";
    $result = $conn->query($sql);
  
    while ($row1 = $result->fetch_assoc()){
     if($row1['aut_id']){
         $codigoautor = $row1['aut_id'];
-        echo ($row1['aut_id']);
     }
 }
    $sql2="SELECT * FROM libros l ,capitulos c,autores a 
