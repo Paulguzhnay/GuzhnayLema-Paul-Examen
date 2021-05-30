@@ -12,7 +12,7 @@
         <nav>
             <ul>
             <li><a href="indexBuscar.html">Búsqueda de Libro</a></li>
-            <li><a href="indexAgregar.html">Registrar Libro</a></li>
+            <li><a href="indexAgregar.php">Registrar Libro</a></li>
             </ul>
         </nav>
     </header>
