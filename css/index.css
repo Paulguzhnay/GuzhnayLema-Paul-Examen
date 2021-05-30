@@ -1,6 +1,6 @@
 /*HTML*/
 html{
-    background-color: olivedrab;
+    background-color: rgb(12, 183, 242);
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
@@ -17,24 +17,109 @@ nav ul li {
     border-radius: 20px;
     border-style: solid;
     background-color: red;  
+    font-size: 20px;
 }
-nav li{
-     color: black;
-     border: thin solid black;
+
+nav a{
+    font-size: 25px;
+   color: black;
 }
+/*Ancho de la tabla*/
 nav {
     display: table;
     width: 100%;
-    margin: 2 auto;
-    float: none;
+    margin:3;
+    /*background: red;*/
 }
+/*Tipo de Tabla*/
 nav ul {
     display: table-row;
-    margin: 0;
+    margin: 5;
 }
-nav ul li a{
+
+h1{
+    font-size: 30px;
+}
+
+/*label*/
+/*label{
+    font-size: 25px;
+    text-align: center;
+    margin-left: 30%;
+}*/
+.formulario01 {
+ 
+    border: thin solid black;
+    background:url(../imgs/fondolibro3.jpg);
+    font-size: 25px;
+    text-align: center;
+    border-radius: 20px;
+    color: white;
+    justify-content: center;
+    width: 100%;
+    margin: 0 auto;
+    max-width: 800px;
+
+
+}
+.formulario01 input{
+    width: 300px;
+    height: 30px;
+
+}
+
+.formulario01 h1{
+    color: white;
+
+}
+
+
+.formulario01 ::-webkit-input-placeholder{
+    color:black;
+}
+/*FORMULARIO 02*/
+.formulario02 {
+ 
+    border: thin solid black;
+    background:url(../imgs/fondolibro2.jpg);
+    font-size: 25px;
+    text-align: center;
+    border-radius: 20px;
+    color: white;
+    justify-content: center;
+    width: 100%;
+    margin: 0 auto;
+    max-width: 800px;
+
+
+}
+.formulario02 input{
+    width: 300px;
+    height: 30px;
+
+}
+
+.formulario02 h1{
     color: black;
 }
-nav ul li:last-of-type {
-    margin-right: 10%;
+
+
+.formulario02 ::-webkit-input-placeholder{
+    color:black;
 }
+
+/*----------------------------------------------------------------------------------------------*/
+ a opcionesA{
+    font-size: 20px;
+    color: black;
+}
+/*----------------------------------------------------------------------------------------------*/
+    /*footer*/
+    footer {
+        border: thin solid black;
+        border-radius: 50px;
+        background-color: blue;
+        text-align: center;
+        font-size: 25px;
+        color:black;
+    }
