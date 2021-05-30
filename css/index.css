@@ -132,3 +132,10 @@ h1{
     background-color: red;
     color: yellow;
 }
+
+/*--------------------------------------*/
+.Cimagen {
+    width: 50%;
+    height: 50%;
+    margin-left: 25%;
+}

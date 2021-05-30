@@ -12,6 +12,7 @@
     <?php
  //incluir conexión a la base de datos
  include "../config/conexionBD.php";
+ $codigoautor=0;
  $autor = $_GET['autor'];
  //echo "Hola " . $cedula;
 //echo("<h1>Resultados</h1>");
@@ -21,8 +22,14 @@
    while ($row1 = $result->fetch_assoc()){
     if($row1['aut_id']){
         $codigoautor = $row1['aut_id'];
-    }
+    } else {
+
+        echo "<tr>";
+        echo " <td colspan='8'> No existen autores registradas en el sistema </td>";
+        echo "</tr>";
+        }
 }
+
    $sql2="SELECT * FROM libros l ,capitulos c,autores a 
    WHERE c.autores_aut_id=aut_id and l.lib_id=c.libros_lib_id and a.aut_id='$codigoautor';";
     $result2= $conn->query($sql2);

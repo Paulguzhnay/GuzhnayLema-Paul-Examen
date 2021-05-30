@@ -72,7 +72,7 @@ AGREGAR CAPITULOS
         <br>
 
 
-        <input type="submit" id="crear" name="crear" value="Registrar Libro" /> 
+        <input type="submit" id="crear" name="crear" value="Registrar Capitulo" /> 
             <input type="reset" id="cancelar" name="cancelar" value="Resetear" />
         </form>
     
