@@ -3,10 +3,13 @@
 <head>
     <meta charset="utf-8"/>
     <title>Home</title>
-	<script
+    <script type="text/javascript" src="../controladores/validaciones.js"></script>
+    <script
 	src="https://code.jquery.com/jquery-3.3.1.min.js"
 	integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
 	crossorigin="anonymous"></script>
+
+
  
     <link href="../css/index.css" rel="stylesheet" />
 </head>
@@ -26,17 +29,18 @@
 <!--
 AGREGAR CAPITULOS
 -->
-<form id="formulario02" class='formulario02' method="POST" action="../controladores/agregarCapitulo.php" >
+<form id="formulario02" class='formulario02' method="POST" action="../controladores/agregarCapitulo.php" onsubmit="return validarCamposObligatorios2()" >
         <h1>Registrar Capitulo</h1>
             <label for="numcapitulo">Numero del Capitulo (*)</label>
             <br>
-            <input type="text" id="numcapitulo" name="numcapitulo" value="" placeholder="Ingrese el numero del capitulo..." />
-            <span id="mensajeNombres" class="error"></span>
+            <input type="text" id="numcapitulo" name="numcapitulo" value="" placeholder="Ingrese el numero del capitulo..." onkeyup="return validarNumCap(this)"/>
+                   <span id="mensajeN" class="error"></span>
+
         <br>
         <label for="ncapitulo">Nombre del Capitulo (*)</label>
         <br>
         <input type="text" id="ncapitulo" name="ncapitulo" value="" placeholder="Ingrese el nombre del capitulo ..."  />
-        <span id="mensajeApellidos" class="error"></span>
+        <span id="mensajeNom" class="error"></span>
         <br>
 
 

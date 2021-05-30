@@ -123,3 +123,12 @@ h1{
         font-size: 25px;
         color:black;
     }
+
+.error {
+    background-color: red;
+    color: yellow;
+}
+.correcto {
+    background-color: red;
+    color: yellow;
+}
